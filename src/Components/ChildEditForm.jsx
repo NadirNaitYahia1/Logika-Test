@@ -6,13 +6,16 @@ import parents from '../Data/Parents.json'
 const ChildEditForm = () => {
 
   const { childrenTable, setChildrenTable,editModal,setEditModal,indexOfEditDelete } = useContext(context);
+
+  // childToEdit est un objet qui contient les informations de l'enfant qui est en train d'être modifié
   const [childToEdit,setChildToEdit] = useState(childrenTable[indexOfEditDelete])
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setChildToEdit({...childToEdit,[name]:value})
   };
 
+  // handleSubmit est une fonction qui permet de valider les données de l'enfant et de les ajouter au tableau childrenTable  
   const handleSubmit = (e) => {
     e.preventDefault();
     const updateChildrenTable = [...childrenTable]

@@ -6,15 +6,11 @@ const ChildDeletePopUp = () => {
 
 
     const { childrenTable, setChildrenTable,deleteModal,setDeleteModal,indexOfEditDelete,setIndexOfEditDelete } = useContext(context);
- 
-
     const deleteChild = ()=> {
         const newChildrenTable = [...childrenTable]
         newChildrenTable.splice(indexOfEditDelete,1)
         setChildrenTable(newChildrenTable)
         setDeleteModal(false)
-
-        
     }
   return (
     <div>

@@ -9,11 +9,19 @@ import { data } from '../Data/ChildrenTable';
 export const context = React.createContext();
 
 const Home = () => {
-  const [editModal, setEditModal] = useState(false);
-  const [deleteModal, setDeleteModal] = useState(false);
-  const [indexOfEditDelete, setIndexOfEditDelete] = useState();
-  const [childrenTable, setChildrenTable] = useState(Array.isArray(data) ? data : []);
+  // editModal est un boolean qui permet de savoir si le pop up --editModal -- est ouvert ou non
+  const [editModal, setEditModal] = useState(false); 
 
+  // deleteModal est un boolean qui permet de savoir si le pop up --deleteModal -- est ouvert ou non
+  const [deleteModal, setDeleteModal] = useState(false); 
+
+  // indexOfEditDelete est un nombre qui permet de savoir quel enfant est en train d'être modifié ou supprimé
+  const [indexOfEditDelete, setIndexOfEditDelete] = useState(); 
+
+  // childrenTable est un tableau qui contient les enfants et leurs informations sont 
+  //  stockées dans un tableau d objets dans le fechier ChildrenTable.js 
+  const [childrenTable, setChildrenTable] = useState(Array.isArray(data) ? data : []);
+  
   return (
     <div className="container-fluid">
       <div className="row d-flex">

@@ -5,9 +5,17 @@ import { Modal } from 'react-bootstrap';
 import { errorHandling } from '../Utils/utils';
 
 const ChildForm = () => {
-  const { childrenTable, setChildrenTable } = useContext(context);
-  const [show, setShow] = useState(false);
+  
+  // deja expliqué dans Home.jsx
+  const { childrenTable, setChildrenTable } = useContext(context); 
+  
+  // show est un boolean qui permet de savoir si le pop up  --affiche les erreurs de validation -- est ouvert ou non
+  const [show, setShow] = useState(false); 
+  
+  // childAdded est un boolean qui permet de savoir si le pop up  --enfant ajouté avec succés -- est ouvert ou non
   const [childAdded, setChildAdded] = useState(false);
+
+  // childAdded2 est un objet qui contient les informations de l'enfant qui vient d'être ajouté
   const [childAdded2, setChildAdded2] = useState({
     name: '',
     firstname: '',
@@ -17,6 +25,8 @@ const ChildForm = () => {
     photo: '',
     parent: '',
   });
+
+  // child est un objet qui contient les informations de l'enfant qui est en train d'être ajouté
   const [child, setChild] = useState({
     name: '',
     firstname: '',
@@ -27,6 +37,7 @@ const ChildForm = () => {
     parent: '',
   });
 
+  // errors est un objet qui contient les erreurs de validation
   const [errors, setErrors] = useState({
     name: '',
     firstname: '',
@@ -37,11 +48,17 @@ const ChildForm = () => {
     parent: '',
   });
 
+  // handleChange est une fonction qui permet de changer les valeurs de l'objet child
   const handleChange = (e) => {
     const { name, value } = e.target;
     setChild({ ...child, [name]: value });
   };
 
+
+  // handleSubmit est une fonction qui permet de valider les données de l'enfant et de les ajouter au tableau childrenTable
+  // newErrors est un objet qui contient les erreurs de validation
+  //errorHandling est une fonction qui permet de valider les données de l'enfant et de retourner les erreurs de validation
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = errorHandling(childrenTable, child);
@@ -65,6 +82,7 @@ const ChildForm = () => {
     }
   };
 
+  
   return (
     <div className="childform titre col-lg-6 col-12 mx-auto justify-content-center align-items-center mt-2">
       <p className='text-center titre2 mt-5 mb-4 mb-md-1 mt-md-1'>Ajouter Un Enfant :</p>

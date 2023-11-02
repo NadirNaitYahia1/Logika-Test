@@ -9,7 +9,16 @@ const ChildTable = () => {
 
 
 
+
   const { childrenTable,setEditModal,setDeleteModal,indexOfEditDelete,setIndexOfEditDelete} = useContext(context);
+ 
+  // cuurentPage est un entier qui permet de savoir la page courante
+  // recordsPerPage est un entier qui permet de savoir le nombre d'enfants par page
+  // indexOfLastRecord est un entier qui permet de savoir l'index du dernier enfant de la page courante
+  // indexOfFirstRecord est un entier qui permet de savoir l'index du premier enfant de la page courante
+  // record est un tableau qui contient les enfants de la page courante
+  // nbPage est un entier qui permet de savoir le nombre de pages
+  // numbers est un tableau qui contient les nombres de pages
 
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 3;
@@ -22,23 +31,26 @@ const ChildTable = () => {
 
   const numbers = [...Array(nbPage + 1).keys()].slice(1);
 
+  // prev est une fonction qui permet de passer à la page précédente
   const prev = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
+
+  // next est une fonction qui permet de passer à la page suivante
   const next = () => {
     if (currentPage < nbPage) {
       setCurrentPage(currentPage + 1);
     }
   };
 
+  // clickEdit est une fonction qui permet d'ouvrir le pop up --editModal -- et de stocker l'index de l'enfant qui est en train d'être modifié
   const clickEdit = (index) =>
   {
     setEditModal(true)
-    setIndexOfEditDelete(index)
-    
+    setIndexOfEditDelete(index)  
   }
 
 
