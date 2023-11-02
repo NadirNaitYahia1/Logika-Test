@@ -22,7 +22,7 @@ const ChildDeletePopUp = () => {
             <Modal.Body>
                 <p>Etes vous sur de supprimer lenfant ?</p>
                 <button className=' btn  btn-danger' onClick={deleteChild}> Supprimer </button>
-                <button className='btn  ms-4'> Annuler </button>
+                <button className='btn  ms-4' onClick={()=> setDeleteModal(false)}> Annuler </button>
                 
 
 
