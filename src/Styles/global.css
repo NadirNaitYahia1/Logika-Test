@@ -1,0 +1,78 @@
+.childtable{
+    min-height: 100vh;
+    /* background-image: linear-gradient(315deg, #da588c 5%, #da77f2 53%) !important;  */
+    background-color: #661182;
+   
+}
+
+.childform{
+    background-color: #fff;
+    height: 100vh;
+    
+    
+}
+.titre{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(34, 53, 53);
+}
+.titre2 {
+ 
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(34, 53, 53);
+}
+ 
+.titre3 {
+ 
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+ 
+.btn-submit{
+    background-color: #661182;
+    color: #fff;
+    
+}
+.btn-submit:hover{
+    background-color: #661182;
+    color: #fff;
+}
+.btn{
+    border: 1px solid #09010b;
+}
+.btn:hover{
+    border: 1px solid #09010b;
+}
+.btn-cancel{
+    background-color: #fff;
+    color: #661182;
+    border: 1px solid #661182;
+}
+.btn-cancel:hover{
+    background-color: rgb(242, 242, 242);
+    color: #661182;
+    border: 1px solid #661182;
+}
+@media only screen and (min-width: 1200px) {
+    *{
+        overflow: hidden;
+    }
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+
+.icons{
+    cursor: pointer;
+    height: 20px !important;
+    width: 20px !important;
+}
+ 
+li{
+    list-style: none;
+}

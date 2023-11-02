@@ -1,0 +1,38 @@
+export const data = [
+    {
+    name: 'Smith',
+    firstname: 'John',
+    birthdate: '2005-03-15',
+    matricule: 'ABC123',
+    birthplace: 'New York',
+    photo: 'child1.jpg',
+    parent: 'Alice and Bob',
+    },
+    {
+      name: 'Smith',
+      firstname: 'John',
+      birthdate: '2005-03-15',
+      matricule: 'ABC123',
+      birthplace: 'New York',
+      photo: 'child1.jpg',
+      parent: 'Alice and Bob',
+      },
+      {
+        name: 'Smith',
+        firstname: 'John',
+        birthdate: '2005-03-15',
+        matricule: 'ABC123',
+        birthplace: 'New York',
+        photo: 'child1.jpg',
+        parent: 'Alice and Bob',
+        },
+        {
+          name: 'Smith',
+          firstname: 'John',
+          birthdate: '2005-03-15',
+          matricule: 'ABC123',
+          birthplace: 'New York',
+          photo: 'child1.jpg',
+          parent: 'Alice and Bob',
+          },
+  ]
